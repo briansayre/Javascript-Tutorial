@@ -3,21 +3,10 @@
 <html>
 
     <head>
-
+        <meta charset="UTF-8">
         <title> JavaScript Tutorial </title>
-
-        <script>
-
-            function part1() {
-                document.getElementById("part1").innerHTML = "Content is now different.";
-            }
-
-            function part2() {
-                document.getElementById("part2").style.color = "blue";
-            }
-
-        </script>
-
+        <script src="index.js"></script> 
+        
     </head>
 
     <body>
@@ -39,7 +28,96 @@
         </p>
         <button onclick="part2()"> Change </button>
 
-        
+        <h2> Part 3 - JS can be put in an external file  </h2>
+        <p id="part3">
+            JS can put in an external file
+        </p>
+        <button onclick="part3()"> Change </button>
+
+        <h2> Part 4 - JS can send alerts and write to the console  </h2>
+        <button onclick="part41()"> Send an alert </button>
+        <button onclick="part42()"> Write 10 * 10 to the console </button>
+
+        <h2> Part 5 - Variables in JS  </h2>
+        <p>
+            x = <span id="x"> 1 </span> <br/>
+            y = <span id="y"> 2 </span> <br/>
+            z = <span id="z"> 3 </span> <br/>
+        </p>
+        <button onclick="addx()"> Add 5 to x </button>
+        <button onclick="multiplyy()"> Multiply y by 2 </button>
+        <button onclick="addxy()"> Combine x and y</button>
+
+        <p>
+            arr = <span id="arr"> Banana,Lemon,Grape,Orange,Apple </span> <br/>
+        </p>
+        <button onclick="arrSort()"> Sort the array </button>
+
+        <h2> Part 6 - Objects in JS  </h2>
+        <p>
+            First Name = <span id="first"> </span> <br/>
+            Last Name = <span id="last"> </span> <br/>
+            Age = <span id="age"> </span> <br/>
+        </p>
+        <button onclick="displayObject()"> Display Object </button>
+
+
+        <script>
+
+            function part1() {
+                document.getElementById("part1").innerHTML = "Content is now different.";
+            }
+
+            function part2() {
+                document.getElementById("part2").style.color = "blue";
+            }
+
+            function part41() {
+                window.alert("Here's an example of an elert in JS");
+            }
+
+            function part42() {
+                console.log(10 * 10);
+            }
+
+            var x = 1;
+            var y = 2;
+            var z = 3;
+
+            function addx() {
+                x += 5;
+                document.getElementById("x").innerHTML = x;
+            }
+
+            function multiplyy() {
+                y *= 2;
+                document.getElementById("y").innerHTML = y;
+            }
+
+            function addxy() {
+                z = x + y;
+                document.getElementById("z").innerHTML = z;
+            }
+
+            var arr = ["Banana", "Lemon", "Grape", "Orange", "Apple"]
+
+            function arrSort() {
+                document.getElementById("arr").innerHTML = arr.sort();
+            }
+
+            var person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+            };
+
+            function displayObject() {
+                document.getElementById("first").innerHTML = person.firstName;
+                document.getElementById("last").innerHTML = person.lastName;
+                document.getElementById("age").innerHTML = person.age;
+            }
+
+        </script>
 
     </body>
 
